@@ -43,5 +43,5 @@ Technical terms explained without jargon.
 | Module-09 - JUnit, Mockito and Integration Tests     | ⏳ Pending     |
 | Module-10 - Design Patterns, SOLID and Clean Code    | ⏳ Pending     |
 
-## 📅 Iniciado em
-[15/07/2026]
+## 📅 Started on
+[2026/07/13]
