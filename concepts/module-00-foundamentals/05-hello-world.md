@@ -22,7 +22,7 @@ Save it as `HelloWorld.java`. The file name **must** match the public class name
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `public class HelloWorld`                | Declares a public class named `HelloWorld`. In Java, all code lives inside classes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `public static void main(String[] args)` | The **entry point** of the program. The JVM looks for this exact method (action) signature to start execution. `public` means accessible from anywhere (allowing other classes and the JVM itself to access and execute it), `static` means it belongs to the class itself (usually, methods require an object/instance to be created and used; static methods belong to the class, so they can run without any object.), `void` means it returns nothing (The `main` method executes everything and terminates, without returning any data to the JVM or to any other method or class that might use that data.), and `String[] args` accepts command-line arguments (When running `java MyProgram hello 42`, these extra words arrive as a list of strings: `args[0] = "hello"`, `args[1] = "42"`.). |
-| `System.out.println(...)`                | Prints text to the console. `System` is a built-in class (a class built into Java that contains system tools; such as access to the keyboard, screen, and errors), `out` is its output stream (an object within System that acts as a communication channel for sending data from your program to the external environment.), and `println()` is the method that prints a line and moves the cursor to the next one (sends the text to `out`, which displays it on the console, and automatically moves to the next line).                                                                                                                                                                                                                                                                             |
+| `System.out.println(...)`                | Prints text to the console. `System` is a built-in class (a class built into Java that contains system tools; such as access to the keyboard, screen, and errors), `out` is its output stream (an object within System that acts as a communication channel for sending data from your program to the external environment: the console.), and `println()` is the method that prints a line and moves the cursor to the next one (sends the text to `out`, which displays it on the console, and automatically moves to the next line).                                                                                                                                                                                                                                                                |
 
 ### 3. Compile it
 
@@ -32,7 +32,7 @@ Open a terminal, navigate to the folder where you saved the file, and run:
 javac HelloWorld.java
 ```
 
-This invokes the **Java compiler**. It reads your `.java` file (human-readable source code) and translates it into a `.class` file (bytecode that the JVM can execute). If the code has no errors, the command produces no output — silence means success. You'll see a new file called `HelloWorld.class` in the same directory.
+This invokes the **Java compiler**. It reads your `.java` file (human-readable source code) and translates it into a `.class` file (bytecode that the JVM can execute). If the code has no errors, the command produces no output (silence means success). You'll see a new file called `HelloWorld.class` in the same directory.
 
 ### 4. Run it
 
@@ -40,14 +40,14 @@ This invokes the **Java compiler**. It reads your `.java` file (human-readable s
 java HelloWorld
 ```
 
-Note: no `.class` extension, no `.java` extension — just the class name. This command starts the JVM, which loads your compiled bytecode, finds the `main` method, and executes it.
+Note: no `.class` extension, no `.java` extension: just the class name. This command starts the JVM, which loads your compiled bytecode, finds the `main` method, and executes it.
 
 The output:
 ```
 Hello, World!
 ```
 
-That's it. You wrote source code, compiled it into bytecode, and the JVM executed it. Three steps — **write, compile, run** — that reflect the fundamental cycle of Java development.
+That's it. You wrote source code, compiled it into bytecode, and the JVM executed it. Three steps: **write, compile, run**. That reflect the fundamental cycle of Java development.
 
 ### 5. The shortcut (Java 11+)
 
