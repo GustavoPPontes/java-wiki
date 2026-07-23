@@ -1,4 +1,4 @@
-## Anatomy of a Java Project
+# Anatomy of a Java Project
 
 A Java project can be as simple as a single `.java` file in a folder. But as soon as the project grows — more classes, tests, libraries, configuration files — structure becomes essential. Not for aesthetic reasons, but for survival. A well-organized project is easy to navigate, easy to build, and easy to hand off to another developer.
 

@@ -1,6 +1,6 @@
-## Why does programming logic exist?
+# Why does programming logic exist?
 
-### What is an algorithm?
+## What is an algorithm?
 
 An algorithm is a finite, ordered and unambiguous sequence of well-defined instructions that, starting from an initial state, is designed to solve a specific problem or reaches a defined result. But what does that mean?
 
@@ -16,7 +16,7 @@ For example, when we want to make a cup of coffee, we follow a series of steps: 
 
 And this is exactly what an algorithm is. Everything we see on a computer is driven by vast sequences of instructions that work together to perform the tasks we use every day, like creating a folder, opening Google Chrome, and even running Java code. Complex software systems rely on multiple algorithms working together to function.
 
-**What is NOT an algorithm — a common beginner mistake**
+### What is NOT an algorithm — a common beginner mistake
 
 Many people confuse algorithms with code. They are distinct things:
  - Algorithm: The logic behind the solution, regardless of the programming language or machine. It can be written in English, pseudocode, or drawn as a flowchart.
@@ -24,7 +24,7 @@ Many people confuse algorithms with code. They are distinct things:
 
 So, an algorithm is the step-by-step process we design to achieve a specific result, while code is the "translation" of that algorithm using a programming language's syntax.
 
-### Programming logic: Why it's a must have?
+## Programming logic: Why it's a must have?
 
 If an algorithm is the "logic path" you want the computer to follow, and coding is the implementation of that algorithm, then `programming logic` is the ability to structure reasoning (through algorithms) to solve problems in a way that a machine can follow and execute it efficiently/correctly.
 
@@ -34,7 +34,7 @@ It encompasses:
  - Iteration (Repetition): How to repeat actions (do this while a condition is true).
  - Data organization: How to organize data and perform operations on it.
 
-**Why is it independent of the programming language?**
+### Why is it independent of the programming language?
 
 Here lies one of the biggest misconceptions in programming education: people learn Java, Python, or JavaScript **without** ever developing programming logic. The result: they know the syntax, but freeze when faced with even a slightly new problem.
 
@@ -51,7 +51,7 @@ Syntax is the set of grammatical rules of a programming language. In Java, you w
 
 The classic mistake: studying `for`, `while`, and `if/else` in Java and thinking you are learning logic. You are are just learning **how** Java expresses logic. Logic itself (the reasoning about iteration, decision, and sequence) predates the language.
 
-### Computational Thinking: the 4-pillar framework
+## Computational Thinking: the 4-pillar framework
 
 The term Computational Thinking was popularized by the computer scientist Jeannette Wing in 2006. It describes how programmers (and those who solve complex problems in general) structure their reasoning.
 
@@ -66,11 +66,11 @@ It's not thinking *like* a computer. It's thinking *for* a computer — in a pre
 
 You can note that these 4 pillars operate in a natural sequence: you **decompose** the problem → **recognize** patterns among the parts → **abstract** the essential → **define the algorithm**. In practice, this cycle repeats iteratively.
 
-### Problem Decomposition: the most underrated skill in programming
+## Problem Decomposition: the most underrated skill in programming
 
 As noted before, the first pillar of *Computational Thinking* is **Decomposition**. It is safe to say that it is one of, if not the most important pillar, because it is what truly defines a great programmer.
 
-**What decomposition really is**
+### What decomposition really is
 
 Decomposition is the ability to take a problem that seems large and intimidating and **break it down into smaller parts, each solvable independently or sequentially**.
 
@@ -94,7 +94,7 @@ Each item on this list is solvable independently. If step 2 fails, you don't nee
 
 This is the same as what a programmer does when solving a coding problem: break it down into parts, solve each part, and integrate.
 
-**How to decompose well — practical criteria**
+### How to decompose well — practical criteria
 1. **Ask:** "What needs to happen before this?" → This reveals dependencies and a natural order.
 2. **Ask:** "Can this be broken down into independent parts?" → If yes, break it down.
 3. **Ask:** "Can I solve this subproblem without having to solve another one first?" → If yes, it's atomic enough
@@ -104,7 +104,7 @@ In real-world systems, decomposition is the foundation of all software architect
 
 ### How to Interpret and Solve Coding Challenges
 
-Problem decomposition is the **key** to solving coding challenges. Not only the ones we see on (LeetCode)[https://leetcode.com/] or (CodeWars)[https://www.codewars.com/], but also in a programmer's everyday life.
+Problem decomposition is the **key** to solving coding challenges. Not only the ones we see on [LeetCode](https://leetcode.com/) or [CodeWars](https://www.codewars.com/), but also in a programmer's everyday life.
 
 That's why it has a great step-by-step guide we should follow to help build this decomposition skill:
 

@@ -1,4 +1,4 @@
-## Environment Variables: JAVA_HOME and PATH
+# Environment Variables: JAVA_HOME and PATH
 
 After installing the JDK, your operating system doesn't automatically know where Java lives. You need to tell it — and you do that through two environment variables: `JAVA_HOME` and `PATH`.
 
@@ -8,7 +8,7 @@ After installing the JDK, your operating system doesn't automatically know where
 
 In short: `JAVA_HOME` tells tools where Java is installed. `PATH` tells your terminal where to find Java's commands.
 
-### Quick Setup
+## Quick Setup
 
 **Windows:**
 1. Press the Windows key and type `variables`, then click on the option **Edit the system environment variables** or **Edit environment variables for your account**.

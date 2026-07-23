@@ -1,4 +1,4 @@
-## What Version Control Is
+# What Version Control Is
 
 Version control is a system that records changes to files over time. Each modification is tracked, timestamped, and attributed to whoever made it. You can revisit any previous state of your project, compare versions, and restore something you deleted three weeks ago.
 
@@ -14,7 +14,7 @@ Before version control, teams resorted to copying folders, naming them `project_
 
 Version control solves three problems at once: it preserves history, it enables parallel work, and it provides a mechanism to merge divergent changes back together. The first gives you safety. The second gives you speed. The third gives you collaboration without chaos.
 
-## Git vs GitHub
+# Git vs GitHub
 
 Git is a **distributed version control system**. Created for the Linux kernel and now the de facto standard, it gives every contributor a full local copy of the repository, including its complete history. Commits, branching, merging, and diffs all happen locally and fast, then sync to a shared remote when you are ready.
 
@@ -24,7 +24,7 @@ GitHub is a **web platform** built on top of Git. GitHub is a web-based develope
 
 The distinction matters: Git is the engine, GitHub is a service that hosts your Git repositories and wraps them in a collaboration layer. Platforms like GitHub, GitLab, and Bitbucket are not alternatives to Git; they sit on top of Git and add hosting, code review, permissions, and CI/CD around it. You can use Git without GitHub. You cannot use GitHub without Git.
 
-## The Basic Workflow
+# The Basic Workflow
 
 The day-to-day cycle with Git follows a predictable sequence:
 
