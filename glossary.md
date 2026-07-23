@@ -2,6 +2,14 @@
 
 ## A
 
+**Abstraction**
+The process of ignoring irrelevant details and focusing only on what matters for the solution.
+One of the four pillars of Computational Thinking.
+
+**Algorithm**
+A finite, ordered, and unambiguous sequence of instructions designed to solve a specific problem.
+It is the logic behind the solution, independent of any programming language.
+
 **Android**
 A mobile operating system based on Linux.
 Uses Java and Kotlin as its primary development languages.
@@ -13,6 +21,10 @@ They run on the JVM and handle massive amounts of data across clusters.
 **Arguments (args)**
 Extra information passed to a program when it starts.
 In the terminal, these are the words you type after the program name.
+
+**Atomic Step**
+A sub-problem small enough that it cannot be broken down further usefully.
+The stopping point of decomposition.
 
 ## B
 
@@ -32,6 +44,10 @@ This is where `java` and `javac` live.
 A web-based Git hosting platform.
 Provides repository hosting, code review tools, and CI/CD features.
 
+**Boundary Case**
+A test input that sits exactly at the limit of a condition (e.g., grade = 7 when the threshold is >= 7).
+Where most bugs are found.
+
 **Branch**
 An independent line of development in a Git repository.
 Allows you to work on changes without affecting the main codebase.
@@ -41,7 +57,7 @@ The act of creating and working on branches.
 Makes parallel development possible.
 
 **Bug**
-An error or flaw in a program that causes incorrect behavior.
+An error or flaw in a program that causes incorrect behavior. Can be a syntax error or a logic error.
 Usually fixed in a separate branch and committed as a patch.
 
 **Build Artifact**
@@ -82,6 +98,22 @@ Done with `git clone`.
 The classic, basic command-line interpreter for Windows.
 It is older and simpler than PowerShell, mainly used for executing basic legacy commands.
 
+**Code Review (Git)**
+The process of examining someone else's code before merging it.
+Usually done through pull requests on platforms like GitHub.
+
+**Codebase**
+The entire collection of source code for a project.
+Includes all files tracked in the repository.
+
+**CodeWars**
+An online platform with coding challenges of varying difficulty.
+Used to practice programming logic and problem-solving.
+
+**Cognitive Load**
+The mental effort required to process information.
+Solving logic and syntax at the same time increases cognitive load unnecessarily.
+
 **Command-Line Interface (CLI)**
 A way of interacting with a program by typing specific lines of text.
 Instead of clicking buttons, you type commands to get things done. Git is a classic example of a CLI.
@@ -90,13 +122,9 @@ Instead of clicking buttons, you type commands to get things done. Git is a clas
 A tool that translates human-readable code into machine-readable bytecode.
 It checks for errors before the program even runs.
 
-**Codebase**
-The entire collection of source code for a project.
-Includes all files tracked in the repository.
-
-**Code Review (Git)**
-The process of examining someone else's code before merging it.
-Usually done through pull requests on platforms like GitHub.
+**Computational Thinking**
+A structured framework for solving problems in a precise and scalable way.
+Composed of four pillars: Decomposition, Pattern Recognition, Abstraction, and Algorithms.
 
 **Commit**
 A snapshot of the project at a specific moment.
@@ -114,7 +142,23 @@ Required when a merge conflict occurs.
 A set of agreed-upon rules or standards for doing things (like folder naming).
 Following conventions makes it easier for different developers to work on the same project.
 
+**Coupling**
+The degree to which one part of a system depends on another.
+Excessive coupling means changing one thing breaks many others.
+
 ## D
+
+**Data Organization**
+The way data is structured and stored for efficient access and manipulation.
+One of the core concepts of programming logic.
+
+**Decomposition**
+Breaking a large problem into smaller, manageable sub-problems.
+The first and most fundamental pillar of Computational Thinking.
+
+**Decision-making (Selection)**
+The ability to choose between different paths based on a condition.
+Expressed in code as `if/else` statements.
 
 **Dependency**
 An external library or piece of code that your project needs to function.
@@ -156,6 +200,14 @@ In the terminal, you run these by typing their name.
 A new functionality added to a software project.
 Often developed in its own branch (Git).
 
+**Finite**
+Having a clear beginning and end.
+A required property of any valid algorithm.
+
+**Flowchart**
+A visual diagram that represents the steps of an algorithm using shapes and arrows.
+An alternative to pseudocode for expressing logic without code.
+
 **Fork (Git)**
 A personal copy of someone else's repository on a hosting platform.
 Common in open-source collaboration.
@@ -163,6 +215,10 @@ Common in open-source collaboration.
 **Framework**
 A pre-built set of tools and libraries that provide a foundation for developing applications.
 Examples include Spring Boot, Quarkus, and Micronaut.
+
+**Framework (Problem-solving)**
+A structured step-by-step approach to solving a problem consistently.
+Helps organize thinking before writing any code.
 
 ## G
 
@@ -202,6 +258,18 @@ It combines a code editor, debugger, and build tools in one place.
 The command that creates a new Git repository in a folder.
 Turns a normal directory into a tracked project.
 
+**Infinite Loop**
+A sequence of instructions that repeats forever because it never reaches a stopping condition.
+Causes the program to crash or consume resources indefinitely.
+
+**Input**
+The data provided to a program or algorithm to be processed.
+The starting material for any computation.
+
+**IPO (Input, Processing, Output)**
+A framework for breaking down any computational problem into three parts.
+Helps identify what data comes in, what happens to it, and what comes out.
+
 **Instance**
 A specific "copy" of a class created in memory (an object).
 While a class is a blueprint, an instance is the actual house built from it.
@@ -209,6 +277,10 @@ While a class is a blueprint, an instance is the actual house built from it.
 **Issue**
 A task, bug report, or feature request tracked on platforms like GitHub.
 Used to organize and discuss work.
+
+**Iteration (Repetition)**
+The ability to repeat a set of instructions while a condition is true.
+Expressed in code as `for` or `while` loops.
 
 ## J
 
@@ -260,9 +332,17 @@ Fully compatible with Java and preferred by Google for Android development.
 
 ## L
 
+**LeetCode**
+An online platform with coding challenges focused on algorithms and data structures.
+Widely used for technical interview preparation.
+
 **Local Repository**
 A Git repository stored on your own machine.
 Contains the full project history.
+
+**Logic Error**
+A mistake in the reasoning of a program that produces wrong results without crashing.
+More subtle and harder to detect than syntax errors.
 
 **Long-Term Support (LTS)**
 A version of software that is guaranteed to receive updates and security patches for several years.
@@ -300,6 +380,10 @@ In Java, the test folder mirrors the main folder to keep tests organized by the 
 A programming paradigm based on the concept of "objects," which contain data and code.
 Organizes software design around data rather than functions.
 
+**Output**
+The result produced by a program or algorithm after processing the input.
+What the computation delivers at the end.
+
 **Output Stream**
 A communication channel used by a program to send data to an external destination (e.g, a file, console screen).
 `System.out` is the standard channel to send data to the screen.
@@ -313,6 +397,22 @@ In the file system, a package corresponds to a folder structure.
 **PATH**
 An environment variable that lists folders where the operating system looks for commands.
 If a folder is in the PATH, you can run its programs from any terminal location.
+
+**Pattern Recognition**
+The ability to identify similarities between problems to reuse known solutions.
+The second pillar of Computational Thinking.
+
+**Processing**
+The set of operations performed on input data to produce the output.
+The "middle step" in the IPO framework.
+
+**Programming Logic**
+The ability to structure reasoning through algorithms to solve problems in a way a machine can execute.
+Independent of any specific programming language.
+
+**Pseudocode**
+An informal, human-readable description of an algorithm.
+Written in plain language, not in any specific programming language syntax.
 
 **Public (Access Modifier)**
 A keyword that makes a class or method accessible from anywhere in the project.
@@ -360,11 +460,19 @@ Contains files and their full version history (.git/).
 Non-code files that the application needs at runtime.
 Examples include configuration files, images, or database settings.
 
+**Rework**
+The time spent fixing or redoing work that was done incorrectly the first time.
+Good decomposition and planning reduce rework significantly.
+
 **Root Directory**
 The main "top-level" folder of a project or installation.
 For the JDK, it is the folder that contains bin, lib, and other subfolders (e.g., C:\Program Files\Java\jdk-21).
 
 ## S
+
+**Sequencing**
+The correct ordering of instructions so that each step logically follows the previous one.
+A fundamental concept of programming logic.
 
 **Shell**
 The program that interprets your text commands and tells the operating system what to do.
@@ -377,6 +485,10 @@ The JVM uses the signature to identify exactly which method to run.
 **Snapshot**
 A saved state of the project at a specific moment.
 Each commit represents a snapshot.
+
+**Software Architecture**
+The high-level structure of a software system, defining how its parts are organized and interact.
+Good decomposition is the foundation of good software architecture.
 
 **Source Code**
 The human-readable instructions written by a programmer.
@@ -410,6 +522,14 @@ Prevents errors by ensuring you don't treat text like a number by mistake.
 To update two repositories (remote and local) so they contain the same commits.
 Happens when pushing or pulling.
 
+**Syntax**
+The set of grammatical rules that define how code must be written in a specific language.
+Different from logic — syntax varies by language, logic does not.
+
+**Syntax Error**
+A mistake in the written structure of code that violates the language's rules.
+Usually caught by the compiler before the program runs.
+
 **System.out.println**
 The standard command to display text on the console.
 It prints the content and then automatically moves to a new line.
@@ -431,6 +551,12 @@ Think of it as a "worker" inside a program. A single program can have multiple t
 **Timestamp (Git)**
 The recorded date and time when a commit was created.
 Helps track the sequence of changes.
+
+## U
+
+**Unambiguous**
+Having exactly one possible interpretation.
+A required property of algorithm instructions so the machine behaves predictably.
 
 ## V
 
