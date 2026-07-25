@@ -14,6 +14,14 @@ Examples: `public`, `private`, `protected`.
 A finite, ordered, and unambiguous sequence of instructions designed to solve a specific problem.
 It is the logic behind the solution, independent of any programming language.
 
+**AND (`&&`)**
+A logical operator that returns `true` only if both sides are `true`.
+Uses short-circuit evaluation: if the left side is `false`, the right side is never checked.
+
+**AND (`&`) — Bitwise**
+A bitwise operator that compares two numbers bit by bit.
+Returns `1` only where both corresponding bits are `1`.
+
 **Android**
 A mobile operating system based on Linux.
 Uses Java and Kotlin as its primary development languages.
@@ -22,6 +30,10 @@ Uses Java and Kotlin as its primary development languages.
 Open-source frameworks used for Big Data processing.
 They run on the JVM and handle massive amounts of data across clusters.
 
+**Arithmetic Operators**
+Symbols that perform mathematical operations on numeric values.
+Examples: `+`, `-`, `*`, `/`, `%`.
+
 **Arguments (args)**
 Extra information passed to a program when it starts.
 In the terminal, these are the words you type after the program name.
@@ -29,6 +41,10 @@ In the terminal, these are the words you type after the program name.
 **Assignment**
 The operation of replacing the current value of a variable with a new one.
 Done with the `=` operator after the variable already has a value.
+
+**Assignment Operator (`=`)**
+The symbol that stores the value on the right into the variable on the left.
+Does not mean "equals" in the mathematical sense.
 
 **Atomic Step**
 A sub-problem small enough that it cannot be broken down further usefully.
@@ -52,13 +68,25 @@ Java is famous for ensuring old code still works on new versions.
 Short for "binary". It is the subfolder inside the JDK that contains the actual executable files.
 This is where `java` and `javac` live.
 
+**Binary**
+The base-2 number system used by computers.
+Represents all values using only `0` and `1`.
+
 **BigDecimal**
 A Java class used for precise decimal arithmetic.
 The correct choice when working with money or financial calculations, where floating-point errors are unacceptable.
 
+**Bit**
+The smallest unit of data in a computer.
+Has only two possible values: `0` or `1`.
+
 **Bitbucket**
 A web-based Git hosting platform.
 Provides repository hosting, code review tools, and CI/CD features.
+
+**Bitwise Operators**
+Operators that work directly on the binary representation of integer values.
+Examples: `&`, `|`, `^`, `~`, `<<`, `>>`.
 
 **`boolean`**
 A primitive type that stores only `true` or `false`.
@@ -105,6 +133,10 @@ Used for variable and method names in Java (e.g., `studentGrade`).
 **Case Sensitivity**
 A rule where the computer distinguishes between uppercase and lowercase letters.
 In Java, `HelloWorld` and `helloworld` are considered completely different things.
+
+**Cast (Type Cast)**
+An explicit instruction to convert a value from one type to another.
+Example: `(double) a` temporarily treats `a` as a `double` for one operation.
 
 **`char`**
 A primitive type that stores a single Unicode character.
@@ -162,6 +194,10 @@ Examples: using an uninitialized variable or assigning the wrong type.
 A tool that translates human-readable code into machine-readable bytecode.
 It checks for errors before the program even runs.
 
+**Compound Assignment Operators**
+Operators that combine an arithmetic operation with assignment in one step.
+Examples: `+=`, `-=`, `*=`, `/=`, `%=`.
+
 **Computational Thinking**
 A structured framework for solving problems in a precise and scalable way.
 Composed of four pillars: Decomposition, Pattern Recognition, Abstraction, and Algorithms.
@@ -173,6 +209,10 @@ Includes the changes made, the author, a timestamp, and a message.
 **Commit Message**
 A short description written when creating a commit.
 Explains what was changed and why.
+
+**Concatenation**
+The operation of joining two or more strings together.
+In Java, the `+` operator performs concatenation when at least one operand is a `String`.
 
 **Conflict Resolution (Git)**
 The process of manually fixing differences when two branches modify the same lines of code.
@@ -232,6 +272,10 @@ Shows what lines were added, removed, or changed.
 A version control system where every user has a complete copy of the repository and its history.
 Git is a distributed system.
 
+**Dividend**
+The number being divided in a division operation.
+In `7 % 2`, the dividend is `7`.
+
 **`double`**
 A primitive type that stores decimal numbers with about 15-16 digits of precision.
 Uses 64 bits. The default choice for decimal arithmetic in Java.
@@ -245,6 +289,10 @@ In Java, the entry point is always the `main` method.
 **Environment Variables**
 Settings in your operating system that store information about the environment.
 They act like "global variables" that any program can read.
+
+**Equality Operator (`==`)**
+An operator that checks if two values are equal.
+For primitives, compares values. For objects, compares memory references — not content.
 
 **Executable**
 A file that contains a program or a sequence of instructions for the computer to run.
@@ -268,6 +316,10 @@ Also prevents methods from being overridden and classes from being extended.
 Having a clear beginning and end.
 A required property of any valid algorithm.
 
+**Flag**
+A boolean value used to represent the on/off state of a feature or condition.
+In bitwise systems, individual bits serve as flags within a single integer.
+
 **`float`**
 A primitive type that stores decimal numbers with about 7 digits of precision.
 Uses 32 bits and requires an `f` suffix on literals (e.g., `3.14f`).
@@ -275,6 +327,10 @@ Uses 32 bits and requires an `f` suffix on literals (e.g., `3.14f`).
 **Floating-point**
 A way of representing decimal numbers in binary.
 Cannot represent all decimal values exactly, which leads to small precision errors.
+
+**Floating-point Division**
+Division where at least one operand is a `double` or `float`.
+Returns a decimal result instead of truncating.
 
 **Flowchart**
 A visual diagram that represents the steps of an algorithm using shapes and arrows.
@@ -320,6 +376,10 @@ Similar to Maven, but uses a different language (Groovy or Kotlin) for its confi
 
 ## H
 
+**Hash Function**
+An algorithm that converts data into a fixed-size numeric value.
+Used in cryptography and data structures. Relies heavily on XOR and shift operations.
+
 **Heap**
 A large, dynamic memory area managed by the JVM where objects are stored.
 Managed by the Garbage Collector.
@@ -353,6 +413,10 @@ Example: `age = 20`;
 **`int`**
 The standard integer primitive type in Java.
 Uses 32 bits and stores values from roughly -2.1 billion to 2.1 billion.
+
+**Integer Division**
+Division between two integer values where the decimal part is discarded entirely.
+`5 / 3` returns `1`, not `1.666...`.
 
 **Integer Literal**
 A number written directly in source code representing a whole number value.
@@ -440,6 +504,10 @@ Fully compatible with Java and preferred by Google for Android development.
 An online platform with coding challenges focused on algorithms and data structures.
 Widely used for technical interview preparation.
 
+**Left Shift (`<<`)**
+A bitwise operator that moves all bits to the left by a given number of positions.
+Each shift left is equivalent to multiplying the value by 2.
+
 **Local Repository**
 A Git repository stored on your own machine.
 Contains the full project history.
@@ -451,6 +519,10 @@ Has no default value; Java refuses to compile if it is used before being initial
 **Logic Error**
 A mistake in the reasoning of a program that produces wrong results without crashing.
 More subtle and harder to detect than syntax errors.
+
+**Logical Operators**
+Operators that combine or invert boolean expressions.
+Examples: `&&` (AND), `||` (OR), `!` (NOT).
 
 **`long`**
 A primitive type for very large integers.
@@ -506,11 +578,23 @@ Each service runs a specific function and communicates via the network.
 The practice of recreating the exact same folder structure in two different places.
 In Java, the test folder mirrors the main folder to keep tests organized by the same packages.
 
+**Modulo (`%`)**
+An operator that returns the remainder of a division.
+`5 % 3` returns `2`. Commonly used to check divisibility or cycle through ranges.
+
 ## N
 
 **Naming Convention**
 A community-agreed standard for naming variables, classes, and methods.
 Improves readability and consistency across codebases.
+
+**NOT (`!`)**
+A logical operator that inverts a boolean value.
+`!true` becomes `false`, and `!false` becomes `true`.
+
+**NOT (`~`) — Bitwise**
+A bitwise operator that inverts every bit of a number.
+In Java, `~n` always equals `-(n + 1)` due to two's complement representation.
 
 **`null`**
 A keyword representing the explicit absence of an object reference.
@@ -529,6 +613,22 @@ Organizes software design around data rather than functions.
 **Object Reference**
 A variable that stores the memory address of an object, not the object itself.
 When two object variables share a reference, changes through one affect the other.
+
+**Operand**
+A value or variable on which an operator acts.
+In `5 + 3`, both `5` and `3` are operands.
+
+**Operator Precedence**
+The set of rules that determines which operations are evaluated first in an expression.
+Similar to the mathematical rule that multiplication happens before addition.
+
+**OR (`||`)**
+A logical operator that returns `true` if at least one side is `true`.
+Uses short-circuit evaluation: if the left side is `true`, the right side is never checked.
+
+**OR (`|`) — Bitwise**
+A bitwise operator that compares two numbers bit by bit.
+Returns `1` where at least one corresponding bit is `1`.
 
 **Output**
 The result produced by a program or algorithm after processing the input.
@@ -626,6 +726,14 @@ Variables and objects live here during execution.
 The process of restructuring existing code without changing its behavior.
 Improves readability or maintainability.
 
+**Relational Operators**
+Operators that compare two values and return a boolean.
+Examples: `==`, `!=`, `>`, `<`, `>=`, `<=`.
+
+**Remainder**
+The amount left over after integer division.
+Returned by the modulo operator `%`.
+
 **Remote Repository**
 A version of the repository hosted on a server.
 Shared among collaborators.
@@ -645,6 +753,10 @@ A method declared `void` uses `return` with no value, or omits it entirely.
 **Rework**
 The time spent fixing or redoing work that was done incorrectly the first time.
 Good decomposition and planning reduce rework significantly.
+
+**Right Shift (`>>`)**
+A bitwise operator that moves all bits to the right by a given number of positions.
+Each shift right is equivalent to dividing the value by `2` (integer division). Preserves the sign bit.
 
 **Root Directory**
 The main "top-level" folder of a project or installation.
@@ -680,9 +792,25 @@ It is the "brain" inside the terminal. Common examples are Bash (Linux/Mac) and 
 An integer primitive type smaller than `int`.
 Uses 16 bits and stores values from -32,768 to 32,767.
 
+**Short-circuit Evaluation**
+A behavior where Java stops evaluating a logical expression as soon as the result is determined.
+Prevents unnecessary or dangerous operations on the right side of `&&` and `||`.
+
+**Sign Bit**
+The leftmost bit in a signed integer that indicates whether the number is positive or negative.
+`0` means positive, `1` means negative.
+
+**Signed Integer**
+An integer type that can represent both positive and negative numbers.
+Java's `int` is a 32-bit signed integer.
+
 **Signature (Method Signature)**
 The unique combination of a method's name and its parameters.
 The JVM uses the signature to identify exactly which method to run.
+
+**String Pool**
+An area in Java's memory where string literals are stored and reused.
+Two string literals with the same content may share the same object, making `==` return `true` — but this is an optimization, not a rule.
 
 **Snapshot**
 A saved state of the project at a specific moment.
@@ -758,6 +886,10 @@ Used to distinguish between class fields and method parameters with the same nam
 A small unit of a process that executes tasks.
 Think of it as a "worker" inside a program. A single program can have multiple threads working at the same time to speed things up.
 
+**Truth Table**
+A table that shows every possible combination of boolean inputs and their resulting output.
+Used to define the exact behavior of logical operators like `&&`, `||`, and `!`.
+
 **Timestamp (Git)**
 The recorded date and time when a commit was created.
 Helps track the sequence of changes.
@@ -770,11 +902,19 @@ Example: in Java, storing `3.9` in an `int` results in `3`, not `4`.
 The ability of the compiler to automatically determine a variable's type from its assigned value.
 Enabled in Java with the `var` keyword (Java 10+).
 
+**Two's Complement**
+The standard binary method Java uses to represent negative integers.
+It allows the same hardware to handle both addition and subtraction.
+
 ## U
 
 **Unambiguous**
 Having exactly one possible interpretation.
 A required property of algorithm instructions so the machine behaves predictably.
+
+**Unary Operator**
+An operator that acts on a single operand.
+Examples: `!` (logical NOT) and `~` (bitwise NOT).
 
 **Unicode**
 An international standard that assigns a unique number to every character across all languages and symbols.
@@ -783,6 +923,10 @@ Java's `char` type is based on Unicode.
 **Uninitialized Variable**
 A variable that has been declared but not yet assigned a value.
 Java refuses to compile code that tries to use a local uninitialized variable.
+
+**Unsigned Right Shift (`>>>`)**
+A bitwise operator that shifts bits to the right and always fills the left with `0`.
+Unlike `>>`, it ignores the sign bit, treating the number as unsigned.
 
 ## V
 
@@ -819,3 +963,9 @@ Examples: `Integer` for `int`, `Double` for `double`, `Boolean` for `boolean`.
 **"Write Once, Run Anywhere" (WORA)**
 Java's motto.
 Philosophy that allows developers to write a program once and have it run on multiple operating systems and hardware platforms.
+
+## X
+
+**XOR (`^`) — Bitwise**
+A bitwise operator that returns `1` where the two corresponding bits are different.
+Used in cryptography, hashing, and toggling flags.
