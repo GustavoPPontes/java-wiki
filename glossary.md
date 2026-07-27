@@ -96,6 +96,10 @@ Used for conditions and decision-making.
 A test input that sits exactly at the limit of a condition (e.g., grade = 7 when the threshold is >= 7).
 Where most bugs are found.
 
+**Braces (`{}`)**
+Curly brackets used to define a block of code that belongs to a structure like `if`, `for`, or a method.
+Always using them — even for single-line blocks — prevents silent bugs.
+
 **Branch**
 An independent line of development in a Git repository.
 Allows you to work on changes without affecting the main codebase.
@@ -103,6 +107,14 @@ Allows you to work on changes without affecting the main codebase.
 **Branching**
 The act of creating and working on branches.
 Makes parallel development possible.
+
+**Buffer**
+A temporary memory area that holds data while it is being transferred or processed.
+In `Scanner`, unread characters (like `\n`) stay in the buffer until consumed.
+
+**Buffer Trap**
+A common `Scanner` bug where a leftover newline character in the buffer causes the next `nextLine()` to read an empty string.
+Fixed by calling `sc.nextLine()` immediately after `nextInt()` or `nextDouble()`.
 
 **Bug**
 An error or flaw in a program that causes incorrect behavior. Can be a syntax error or a logic error.
@@ -141,6 +153,10 @@ Example: `(double) a` temporarily treats `a` as a `double` for one operation.
 **`char`**
 A primitive type that stores a single Unicode character.
 Uses single quotes: `'A'`.
+
+**Chained Ternary**
+A ternary operator nested inside another ternary.
+Legal in Java but extremely hard to read. Use `if/else if` instead.
 
 **CI/CD (Continuous Integration / Continuous Deployment)**
 A set of automated practices that build, test, and deploy code.
@@ -214,6 +230,10 @@ Explains what was changed and why.
 The operation of joining two or more strings together.
 In Java, the `+` operator performs concatenation when at least one operand is a `String`.
 
+**Conditional Structure**
+A programming construct that executes different blocks of code depending on whether a condition is true or false.
+The foundation of decision-making in any program. Examples: `if`, `switch`.
+
 **Conflict Resolution (Git)**
 The process of manually fixing differences when two branches modify the same lines of code.
 Required when a merge conflict occurs.
@@ -252,6 +272,10 @@ Expressed in code as `if/else` statements.
 The value Java automatically assigns to class fields when no explicit value is given.
 Examples: `0` for integers, `false` for booleans, `null` for objects.
 
+**`default` (switch)**
+The fallback case in a `switch` statement or expression that runs when no other case matches.
+Required in Switch Expressions when the compiler cannot guarantee all cases are covered.
+
 **Dependency**
 An external library or piece of code that your project needs to function.
 Instead of writing everything from scratch, you "depend" on these existing tools.
@@ -267,6 +291,10 @@ The `main` branch is typically kept deployable.
 **Diff (Git)**
 A comparison between two versions of a file.
 Shows what lines were added, removed, or changed.
+
+**Discrete Values**
+Specific, individual values as opposed to ranges or continuous values.
+`switch` can only compare against discrete values, not ranges like `x > 10`.
 
 **Distributed Version Control System (DVCS)**
 A version control system where every user has a complete copy of the repository and its history.
@@ -286,6 +314,10 @@ Uses 64 bits. The default choice for decimal arithmetic in Java.
 The specific place where a program starts its execution.
 In Java, the entry point is always the `main` method.
 
+**`enum`**
+A special Java type that defines a fixed set of named constants.
+Fully supported by `switch` statements and expressions.
+
 **Environment Variables**
 Settings in your operating system that store information about the environment.
 They act like "global variables" that any program can read.
@@ -303,6 +335,10 @@ The part of a floating-point number that controls its magnitude or scale.
 Determines how far the decimal point shifts.
 
 ## F
+
+**Fall-through**
+The behavior in a classic `switch` where execution continues into the next case when `break` is missing.
+Intentional in some patterns, but a common source of silent bugs when accidental.
 
 **Feature**
 A new functionality added to a software project.
@@ -339,6 +375,14 @@ An alternative to pseudocode for expressing logic without code.
 **Fork (Git)**
 A personal copy of someone else's repository on a hosting platform.
 Common in open-source collaboration.
+
+**Format Specifier**
+A placeholder in a `printf` format string that gets replaced by an argument value.
+Examples: `%d` for integers, `%s` for strings, `%.2f` for floats with 2 decimal places.
+
+**Format String**
+A string passed to `printf` that contains text mixed with format specifiers.
+Controls exactly how the output is displayed.
 
 **Framework**
 A pre-built set of tools and libraries that provide a foundation for developing applications.
@@ -429,6 +473,10 @@ Causes the program to crash or consume resources indefinitely.
 **Input**
 The data provided to a program or algorithm to be processed.
 The starting material for any computation.
+
+**Input Stream**
+A channel through which data flows into a program.
+`System.in` is the standard input stream connected to the keyboard.
 
 **IPO (Input, Processing, Output)**
 A framework for breaking down any computational problem into three parts.
@@ -588,6 +636,14 @@ An operator that returns the remainder of a division.
 A community-agreed standard for naming variables, classes, and methods.
 Improves readability and consistency across codebases.
 
+**Nested Conditionals**
+An `if` statement placed inside another `if` block.
+Valid when the inner condition only makes sense after the outer one is confirmed. Avoid going deeper than two levels.
+
+**Newline Character (`\n`)**
+A special character that represents the end of a line of text.
+Left behind in the buffer by `nextInt()` and `nextDouble()`, causing the buffer trap.
+
 **NOT (`!`)**
 A logical operator that inverts a boolean value.
 `!true` becomes `false`, and `!false` becomes `true`.
@@ -667,6 +723,14 @@ Java does not expose pointers to developers.
 **Primitive Type**
 A basic data type built directly into Java.
 Stores values directly in memory with no methods or overhead. Java has 8: `byte`, `short`, `int`, `long`, `float`, `double`, `char`, `boolean`.
+
+**`printf`**
+A method on `System.out` that prints formatted output using a format string and arguments.
+Follows C-style formatting with specifiers like `%d`, `%s`, and `%.2f`.
+
+**`PrintStream`**
+The Java class type of `System.out`.
+Provides methods like `print()`, `println()`, and `printf()` for sending output to the console.
 
 **`private`**
 An access modifier that restricts visibility to within the same class only.
@@ -770,7 +834,7 @@ Example: `NullPointerException`, array index out of bounds.
 
 **Scanner**
 A built-in Java class used to read input from the user or other sources.
-Commonly used to read keyboard input via `System.in`.
+Commonly used to read keyboard input via `System.in`. Must be imported from `java.util` and connected to `System.in` for keyboard input.
 
 SCREAMING_SNAKE_CASE (UPPER_SNAKE_CASE)
 A naming convention where all letters are uppercase and words are separated by underscores.
@@ -852,6 +916,14 @@ Example: `"Hello, World!"`
 A feature where the programming language strictly enforces rules about data types.
 Prevents errors by ensuring you don't treat text like a number by mistake.
 
+**Switch Expression (Java 14+)**
+A modern redesign of the classic `switch` that produces a value and eliminates fall-through.
+Uses arrow syntax (`->`) instead of colons, and requires `yield` for multi-line cases.
+
+**Switch Statement (Classic `switch`)**
+A control-flow structure that jumps to a matching case based on a variable's value.
+Requires `break` at the end of each case to prevent fall-through.
+
 **Sync (Git)**
 To update two repositories (remote and local) so they contain the same commits.
 Happens when pushing or pulling.
@@ -863,6 +935,14 @@ Different from logic — syntax varies by language, logic does not.
 **Syntax Error**
 A mistake in the written structure of code that violates the language's rules.
 Usually caught by the compiler before the program runs.
+
+**`System.in`**
+A static object representing the standard input stream (the keyboard).
+Passed to `Scanner` to enable reading user input.
+
+**`System.out`**
+A static `PrintStream` object available in every Java program.
+Used to send output to the console via `print()`, `println()`, and `printf()`.
 
 **System.out.println**
 The standard command to display text on the console.
@@ -877,6 +957,10 @@ It is usually ignored by version control (like Git) because it can be recreated 
 **Terminal**
 A text-based interface used to type commands to the computer.
 It allows you to talk directly to the operating system without using a mouse or menus.
+
+**Ternary Operator (`? :`)**
+A compact operator that evaluates a condition and returns one of two values.
+Syntax: `condition ? value_if_true : value_if_false`. Best used for simple, single-line assignments.
 
 **`this`**
 A keyword that refers to the current object instance inside a class.
@@ -897,6 +981,10 @@ Helps track the sequence of changes.
 **Truncation**
 The silent removal of the decimal part of a number when storing it in an integer type.
 Example: in Java, storing `3.9` in an `int` results in `3`, not `4`.
+
+**Token**
+A single unit of input separated by whitespace (space, tab, or newline).
+`Scanner.next()` reads one token at a time.
 
 **Type Inference**
 The ability of the compiler to automatically determine a variable's type from its assigned value.
@@ -969,3 +1057,9 @@ Philosophy that allows developers to write a program once and have it run on mul
 **XOR (`^`) — Bitwise**
 A bitwise operator that returns `1` where the two corresponding bits are different.
 Used in cryptography, hashing, and toggling flags.
+
+## Y
+
+**`yield`**
+A keyword used inside a multi-line Switch Expression case block to specify the value the block produces.
+Plays the same role that `return` plays in a method — but only inside Switch Expression blocks.
