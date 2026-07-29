@@ -26,6 +26,18 @@ Returns `1` only where both corresponding bits are `1`.
 A mobile operating system based on Linux.
 Uses Java and Kotlin as its primary development languages.
 
+**Array**
+A fixed-size, ordered collection of elements of the same type stored in contiguous memory positions.
+Each element is accessed by a numeric index starting at `0`.
+
+**Array Literal**
+A shorthand syntax that declares, initializes, and assigns all values of an array at once.
+Example: `int[] grades = {8, 7, 9, 6, 10};`
+
+**ArrayIndexOutOfBoundsException**
+A runtime crash that occurs when you try to access an index that does not exist in an array.
+The most common cause is using `.length` instead of `.length - 1` as the last index.
+
 **Apache Hadoop / Spark / Kafka**
 Open-source frameworks used for Big Data processing.
 They run on the JVM and handle massive amounts of data across clusters.
@@ -107,6 +119,14 @@ Allows you to work on changes without affecting the main codebase.
 **Branching**
 The act of creating and working on branches.
 Makes parallel development possible.
+
+**`break`**
+A keyword that immediately terminates the current loop or `switch` block.
+Execution jumps to the first statement after the closing brace of the structure.
+
+**Boolean Flag**
+A `boolean` variable used to track a condition across multiple iterations or scopes.
+Often a sign that the code structure could be simplified with `break` or better loop design.
 
 **Buffer**
 A temporary memory area that holds data while it is being transferred or processed.
@@ -198,6 +218,10 @@ Used to practice programming logic and problem-solving.
 The mental effort required to process information.
 Solving logic and syntax at the same time increases cognitive load unnecessarily.
 
+**Collection**
+A data structure that groups multiple elements together.
+Arrays are the simplest form; Java also provides more flexible collection types like `ArrayList`.
+
 **Command-Line Interface (CLI)**
 A way of interacting with a program by typing specific lines of text.
 Instead of clicking buttons, you type commands to get things done. Git is a classic example of a CLI.
@@ -242,9 +266,21 @@ Required when a merge conflict occurs.
 A variable whose value cannot change after it is initialized.
 Declared with the `final` keyword and named in `SCREAMING_SNAKE_CASE`.
 
+**`continue`**
+A keyword that skips the rest of the current loop iteration and jumps to the next one.
+The loop itself does not end — only the current pass is interrupted.
+
+**Contiguous Memory**
+Memory positions that are physically adjacent to each other.
+Arrays store all their elements in contiguous positions, making index-based access fast.
+
 **Convention**
 A set of agreed-upon rules or standards for doing things (like folder naming).
 Following conventions makes it easier for different developers to work on the same project.
+
+**Counter Variable**
+A variable used to track the number of iterations in a loop.
+Commonly named `i`, `j`, or `k` by convention.
 
 **Coupling**
 The degree to which one part of a system depends on another.
@@ -308,7 +344,15 @@ In `7 % 2`, the dividend is `7`.
 A primitive type that stores decimal numbers with about 15-16 digits of precision.
 Uses 64 bits. The default choice for decimal arithmetic in Java.
 
+**`do-while` Loop**
+A loop that executes its body first and checks the condition afterward.
+Guarantees the body runs at least once, regardless of the condition.
+
 ## E
+
+**Enhanced `for` Loop (`for-each`)**
+A simplified loop syntax for iterating through all elements of an array or collection in order.
+Does not expose the index and cannot modify primitive array elements directly.
 
 **Entry Point**
 The specific place where a program starts its execution.
@@ -371,6 +415,13 @@ Returns a decimal result instead of truncating.
 **Flowchart**
 A visual diagram that represents the steps of an algorithm using shapes and arrows.
 An alternative to pseudocode for expressing logic without code.
+
+**`for` Loop**
+A loop designed for situations where the number of iterations is known before the loop starts.
+Its header contains three parts: initialization, condition, and update.
+
+**`for-each` Loop**
+See *Enhanced `for` Loop*.
 
 **Fork (Git)**
 A personal copy of someone else's repository on a hosting platform.
@@ -446,6 +497,10 @@ Must follow compiler rules and cannot be a reserved keyword.
 A keyword that brings a class or package into scope so it can be used without its full name.
 Example: `import java.util.Scanner`
 
+**Infinite Loop**
+A loop whose condition never becomes false, causing the program to run forever.
+Usually caused by forgetting to update the variable being tested in the condition.
+
 **Init (git init)**
 The command that creates a new Git repository in a folder.
 Turns a normal directory into a tracked project.
@@ -478,21 +533,25 @@ The starting material for any computation.
 A channel through which data flows into a program.
 `System.in` is the standard input stream connected to the keyboard.
 
-**IPO (Input, Processing, Output)**
-A framework for breaking down any computational problem into three parts.
-Helps identify what data comes in, what happens to it, and what comes out.
-
 **Instance**
 A specific "copy" of a class created in memory (an object).
 While a class is a blueprint, an instance is the actual house built from it.
+
+**IPO (Input, Processing, Output)**
+A framework for breaking down any computational problem into three parts.
+Helps identify what data comes in, what happens to it, and what comes out.
 
 **Issue**
 A task, bug report, or feature request tracked on platforms like GitHub.
 Used to organize and discuss work.
 
+**Iterable**
+Any object that can be traversed element by element by a loop.
+Arrays and Java collections are iterable.
+
 **Iteration (Repetition)**
-The ability to repeat a set of instructions while a condition is true.
-Expressed in code as `for` or `while` loops.
+The ability to repeat a set of instructions while a condition is true. (One complete execution of a loop body.)
+Expressed in code as `for` or `while` loops. A loop with 5 repetitions performs 5 iterations.
 
 ## J
 
@@ -548,6 +607,10 @@ Fully compatible with Java and preferred by Google for Android development.
 
 ## L
 
+**Label (Labeled `break`)**
+An identifier placed before a loop, followed by a colon, used as a target for `break` or `continue`.
+Allows exiting an outer loop from inside a nested inner loop.
+
 **LeetCode**
 An online platform with coding challenges focused on algorithms and data structures.
 Widely used for technical interview preparation.
@@ -579,6 +642,14 @@ Uses 64 bits and requires an `L` suffix on literals (e.g., `10_000_000_000L`).
 **Long-Term Support (LTS)**
 A version of software that is guaranteed to receive updates and security patches for several years.
 Focuses on stability for corporate environments.
+
+**Loop**
+A control structure that repeats a block of instructions for as long as a condition is true or for a fixed number of iterations.
+Java provides four: `for`, `while`, `do-while`, and `for-each`.
+
+**`.length` (Array Property)**
+A property that returns the total number of slots in an array.
+It is a property, not a method — no parentheses are used.
 
 ## M
 
@@ -640,6 +711,10 @@ Improves readability and consistency across codebases.
 An `if` statement placed inside another `if` block.
 Valid when the inner condition only makes sense after the outer one is confirmed. Avoid going deeper than two levels.
 
+**Nested Loop**
+A loop placed inside the body of another loop.
+The inner loop completes all its iterations for each single iteration of the outer loop.
+
 **Newline Character (`\n`)**
 A special character that represents the end of a line of text.
 Left behind in the buffer by `nextInt()` and `nextDouble()`, causing the buffer trap.
@@ -669,6 +744,10 @@ Organizes software design around data rather than functions.
 **Object Reference**
 A variable that stores the memory address of an object, not the object itself.
 When two object variables share a reference, changes through one affect the other.
+
+**Off-by-one Error**
+A logic mistake where a loop runs one iteration too many or too few.
+The most common cause in arrays is using `<= .length` instead of `< .length`.
 
 **Operand**
 A value or variable on which an operator acts.
@@ -826,9 +905,9 @@ Each shift right is equivalent to dividing the value by `2` (integer division). 
 The main "top-level" folder of a project or installation.
 For the JDK, it is the folder that contains bin, lib, and other subfolders (e.g., C:\Program Files\Java\jdk-21).
 
-**Runtime Error**
+**Runtime Error/Crash**
 An error that occurs while the program is running, not during compilation.
-Example: `NullPointerException`, array index out of bounds.
+`ArrayIndexOutOfBoundsException` and `NullPointerException` are common runtime crashes.
 
 ## S
 
@@ -1016,6 +1095,10 @@ Java refuses to compile code that tries to use a local uninitialized variable.
 A bitwise operator that shifts bits to the right and always fills the left with `0`.
 Unlike `>>`, it ignores the sign bit, treating the number as unsigned.
 
+**Update (Loop)**
+The third part of a `for` loop header that runs after each iteration.
+Typically increments or decrements the counter variable (e.g., `i++` or `i--`).
+
 ## V
 
 **`var`**
@@ -1052,6 +1135,10 @@ Examples: `Integer` for `int`, `Double` for `double`, `Boolean` for `boolean`.
 Java's motto.
 Philosophy that allows developers to write a program once and have it run on multiple operating systems and hardware platforms.
 
+**`while` Loop**
+A loop designed for situations where the number of iterations is not known in advance.
+The condition is evaluated before every iteration; if false from the start, the body never runs.
+
 ## X
 
 **XOR (`^`) — Bitwise**
@@ -1063,3 +1150,9 @@ Used in cryptography, hashing, and toggling flags.
 **`yield`**
 A keyword used inside a multi-line Switch Expression case block to specify the value the block produces.
 Plays the same role that `return` plays in a method — but only inside Switch Expression blocks.
+
+## Z
+
+**Zero-indexed**
+A convention where the first element of a collection is at position `0`, not `1`.
+In a Java array of size `n`, valid indices range from `0` to `n - 1`.
