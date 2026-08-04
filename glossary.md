@@ -7,8 +7,12 @@ The process of ignoring irrelevant details and focusing only on what matters for
 One of the four pillars of Computational Thinking.
 
 **Access Modifier**
-A keyword that controls where a class, method, or variable can be accessed from.
-Examples: `public`, `private`, `protected`.
+A keyword that controls which parts of the program can see and use a field, method, or class.
+The four levels in Java are: `public`, `private`, `protected`, and package-private (no keyword).
+
+**Accessor Method**
+A method in a record that returns the value of a component.
+Unlike JavaBean getters, accessor methods have no `get` prefix — they share the exact name of the component.
 
 **Algorithm**
 A finite, ordered, and unambiguous sequence of instructions designed to solve a specific problem.
@@ -112,6 +116,10 @@ Examples: `&`, `|`, `^`, `~`, `<<`, `>>`.
 A metaphor for what a class is: a definition that describes what an object will look like.
 The blueprint itself is not the building — the class itself is not the object.
 
+**Boilerplate**
+Repetitive, predictable code that must be written to satisfy language requirements but adds no unique logic.
+Records eliminate boilerplate by auto-generating constructors, accessors, `equals()`, `hashCode()`, and `toString()`.
+
 **`boolean`**
 A primitive type that stores only `true` or `false`.
 Used for conditions and decision-making.
@@ -159,6 +167,10 @@ It is the "product" ready to be executed or distributed.
 **Build Tool**
 A program that automates the process of compiling, testing, and packaging code.
 In Java, the most common are Maven and Gradle.
+
+**Business Rule**
+A domain-specific constraint that defines what values or operations are valid in a system.
+Example: a bank balance cannot be negative. Enforced inside setters and constructors, not by the JVM.
 
 **`byte`**
 The smallest integer primitive type in Java.
@@ -238,6 +250,10 @@ Arrays are the simplest form; Java also provides more flexible collection types 
 A way of interacting with a program by typing specific lines of text.
 Instead of clicking buttons, you type commands to get things done. Git is a classic example of a CLI.
 
+**Compact Constructor**
+A special constructor syntax available in records that omits the parameter list and the field assignments.
+Used to add validation logic; the compiler automatically appends the field assignments after your code runs.
+
 **Compile-time Error**
 An error detected by the compiler before the program runs.
 Examples: using an uninitialized variable or assigning the wrong type.
@@ -308,6 +324,10 @@ Excessive coupling means changing one thing breaks many others.
 The way data is structured and stored for efficient access and manipulation.
 One of the core concepts of programming logic.
 
+**Data Transfer Object (DTO)**
+An object whose sole purpose is to carry data between layers of an application.
+Records are ideal DTOs because their immutability guarantees no layer can accidentally mutate the data in transit.
+
 **Declaration**
 The operation of telling the compiler that a variable of a certain type exists.
 Example: `int age`;
@@ -360,6 +380,9 @@ Git is a distributed system.
 The number being divided in a division operation.
 In `7 % 2`, the dividend is `7`.
 
+**Domain Rule**
+See *Business Rule*.
+
 **`double`**
 A primitive type that stores decimal numbers with about 15-16 digits of precision.
 Uses 64 bits. The default choice for decimal arithmetic in Java.
@@ -369,6 +392,10 @@ A loop that executes its body first and checks the condition afterward.
 Guarantees the body runs at least once, regardless of the condition.
 
 ## E
+
+**Encapsulation**
+The practice of keeping a class's fields `private` and routing all reads and writes through methods the class controls.
+Allows the class to enforce its own rules on every access to its data.
 
 **Enhanced `for` Loop (`for-each`)**
 A simplified loop syntax for iterating through all elements of an array or collection in order.
@@ -385,6 +412,10 @@ Fully supported by `switch` statements and expressions.
 **Environment Variables**
 Settings in your operating system that store information about the environment.
 They act like "global variables" that any program can read.
+
+**`equals()` Method**
+A method that checks whether two objects are considered logically equal based on their content.
+Records auto-generate this method to compare all components by value.
 
 **Equality Operator (`==`)**
 An operator that checks if two values are equal.
@@ -411,9 +442,9 @@ Often developed in its own branch (Git).
 **Field**
 See *Attribute*.
 
-**`final`**
+**`final` (Field)**
 A keyword that prevents a variable from being reassigned after initialization.
-Also prevents methods from being overridden and classes from being extended.
+Also prevents methods from being overridden and classes from being extended. All record components are implicitly `private` and `final`.
 
 **Finite**
 Having a clear beginning and end.
@@ -476,6 +507,10 @@ Examples: Haskell, Erlang, Clojure.
 A JVM mechanism that automatically frees memory occupied by objects no longer in use.
 Removes the need for manual memory management in Java.
 
+**Getter**
+A public method that reads and returns the value of a private field.
+Follows the JavaBean naming convention: `getFieldName()` for most types, `isFieldName()` for booleans.
+
 **Git**
 A distributed version control system.
 Tracks changes to files and manages collaboration between developers.
@@ -497,6 +532,10 @@ A modern tool used to build and automate software projects.
 Similar to Maven, but uses a different language (Groovy or Kotlin) for its configuration.
 
 ## H
+
+**`hashCode()` Method**
+A method that returns an integer representation of an object, used by hash-based data structures like `HashMap`.
+Records auto-generate this method based on all components.
 
 **Hash Function**
 An algorithm that converts data into a fixed-size numeric value.
@@ -520,9 +559,17 @@ It combines a code editor, debugger, and build tools in one place.
 A name given to a variable, class, method, or package by the programmer.
 Must follow compiler rules and cannot be a reserved keyword.
 
+**`IllegalArgumentException`**
+A runtime exception thrown when a method receives an argument that violates a business rule.
+Commonly used inside setters and constructors to reject invalid values.
+
 **`import`**
 A keyword that brings a class or package into scope so it can be used without its full name.
 Example: `import java.util.Scanner`
+
+**Immutability**
+The property of an object whose state cannot change after it is created.
+Records are immutable by design — no setters can be added to their components.
 
 **Infinite Loop**
 A loop whose condition never becomes false, causing the program to run forever.
@@ -593,6 +640,10 @@ Expressed in code as `for` or `while` loops. A loop with 5 repetitions performs 
 A high-level, object-oriented programming language designed to be platform-independent.
 Its motto is "Write Once, Run Anywhere" (WORA).
 
+**JavaBean Specification**
+A naming convention for getters and setters: `getFieldName()`, `isFieldName()` for booleans, and `setFieldName()`.
+Widely used by frameworks that rely on reflection to discover and call these methods.
+
 **JAVA_HOME**
 A specific environment variable that points to the main folder where Java is installed.
 Used by other software to find where the Java compiler and libraries are located.
@@ -648,6 +699,10 @@ Allows exiting an outer loop from inside a nested inner loop.
 **Lambda Expression**
 A concise way to represent a function as a value, introduced in Java 8.
 Brings functional programming patterns into Java.
+
+**Lazy Initialization**
+A technique where a field's value is computed and assigned only when it is first accessed, not at object creation.
+Cannot be done in records; requires a traditional class.
 
 **LeetCode**
 An online platform with coding challenges focused on algorithms and data structures.
@@ -743,6 +798,10 @@ In Java, the test folder mirrors the main folder to keep tests organized by the 
 An operator that returns the remainder of a division.
 `5 % 3` returns `2`. Commonly used to check divisibility or cycle through ranges.
 
+**Mutation**
+Any change to an object's state after it has been created.
+Records prevent mutation structurally. Traditional classes control it through private fields and validated setters.
+
 ## N
 
 **Naming Convention**
@@ -831,7 +890,11 @@ Example: assigning a number too large for `int` without using `long`.
 
 **Package**
 A way of organizing Java classes into namespaces (like `com.example`; named in all lowercase).
-In the file system, a package corresponds to a folder structure.
+In the file system, a package corresponds to a folder structure. The compiler uses package declarations to determine which classes are neighbors for package-private access.
+
+**Package-private (No Modifier)**
+The default access level when no modifier keyword is written.
+Restricts visibility to classes within the same package only.
 
 **Paradigm**
 A structural contract that defines the fundamental building block of a program and how logic is organized.
@@ -927,6 +990,18 @@ Done with `git push`.
 The fast, temporary memory where the JVM stores data while a program runs.
 Variables and objects live here during execution.
 
+**Record**
+A special class form introduced in Java 16 that auto-generates a constructor, accessors, `equals()`, `hashCode()`, and `toString()` from a concise header.
+All components are implicitly `private` and `final`, making records inherently immutable.
+
+**Record Component**
+A name-and-type pair declared in the record header.
+The compiler generates a private final field and a public accessor method for each component automatically.
+
+**Record Header**
+The parenthesized list of components declared after the record name.
+Example: `record Point(int x, int y)` - `int x` and `int y` are the record components.
+
 **Refactor**
 The process of restructuring existing code without changing its behavior.
 Improves readability or maintainability.
@@ -934,6 +1009,10 @@ Improves readability or maintainability.
 **Reference**
 A variable that stores the memory address of an object, not the object itself.
 Assigning one reference variable to another makes both point to the same object, not two independent copies.
+
+**Reflection**
+A Java mechanism that allows a program to inspect and call methods and fields of a class at runtime by name.
+Frameworks use reflection to discover JavaBean-style getters and setters automatically.
 
 **Relational Operators**
 Operators that compare two values and return a boolean.
@@ -1001,6 +1080,10 @@ Good variable and method names eliminate the need for explanatory comments.
 The correct ordering of instructions so that each step logically follows the previous one.
 A fundamental concept of programming logic.
 
+**Setter**
+A public method that receives a new value and writes it into a private field.
+Can contain validation logic to reject invalid values before the assignment happens.
+
 **Shadow (Variable Shadowing)**
 When a local variable or parameter has the same name as an attribute, hiding the attribute from direct access.
 Resolved by using `this.attributeName` to explicitly refer to the attribute.
@@ -1033,6 +1116,22 @@ Java's `int` is a 32-bit signed integer.
 The unique combination of a method's name and its parameters.
 The JVM uses the signature to identify exactly which method to run.
 
+**Snapshot (Records)**
+An object that captures the state of something at a specific moment and never changes afterward.
+Records are the natural Java type for snapshots.
+
+**Snapshot (Git)**
+A saved state of the project at a specific moment.
+Each commit represents a snapshot.
+
+**Software Architecture**
+The high-level structure of a software system, defining how its parts are organized and interact.
+Good decomposition is the foundation of good software architecture.
+
+**Source Code**
+The human-readable instructions written by a programmer.
+In Java, these are the files ending in `.java`.
+
 **State**
 The current values of all attributes of an object at a given moment.
 The constructor sets the initial state; methods can change it over time.
@@ -1044,18 +1143,6 @@ Cannot access instance attributes directly because it has no associated object.
 **String Pool**
 An area in Java's memory where string literals are stored and reused.
 Two string literals with the same content may share the same object, making `==` return `true` — but this is an optimization, not a rule.
-
-**Snapshot**
-A saved state of the project at a specific moment.
-Each commit represents a snapshot.
-
-**Software Architecture**
-The high-level structure of a software system, defining how its parts are organized and interact.
-Good decomposition is the foundation of good software architecture.
-
-**Source Code**
-The human-readable instructions written by a programmer.
-In Java, these are the files ending in `.java`.
 
 **Spring Boot**
 The most popular Java framework for building web and enterprise applications.
@@ -1139,6 +1226,14 @@ Used to distinguish between class fields (attribute) and method parameters with 
 A small unit of a process that executes tasks.
 Think of it as a "worker" inside a program. A single program can have multiple threads working at the same time to speed things up.
 
+**`toString()` Method**
+A method that returns a human-readable string representation of an object.
+Records auto-generate this method in the format `ClassName[component1=value1, component2=value2, ...]`.
+
+**Token**
+A single unit of input separated by whitespace (space, tab, or newline).
+`Scanner.next()` reads one token at a time.
+
 **Truth Table**
 A table that shows every possible combination of boolean inputs and their resulting output.
 Used to define the exact behavior of logical operators like `&&`, `||`, and `!`.
@@ -1150,10 +1245,6 @@ Helps track the sequence of changes.
 **Truncation**
 The silent removal of the decimal part of a number when storing it in an integer type.
 Example: in Java, storing `3.9` in an `int` results in `3`, not `4`.
-
-**Token**
-A single unit of input separated by whitespace (space, tab, or newline).
-`Scanner.next()` reads one token at a time.
 
 **Type**
 A classification that defines what values a variable can hold and what operations are valid on it.
@@ -1198,6 +1289,10 @@ The third part of a `for` loop header that runs after each iteration.
 Typically increments or decrements the counter variable (e.g., `i++` or `i--`).
 
 ## V
+
+**Validation**
+Logic that checks whether a value satisfies a rule before allowing it to be stored.
+Should be placed in both the setter and the constructor to prevent invalid state at any point in an object's life.
 
 **`var`**
 A keyword introduced in Java 10 that allows the compiler to infer a variable's type automatically.
