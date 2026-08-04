@@ -63,7 +63,8 @@ Technical terms explained without jargon.
 - [x] Project - Selection Process Validation System
 
 ### Module 02 — Object-Oriented Programming (OOP)
-- [x] Session 2.1 — Classes, Objects, and the OOP Paradigm
+- [x] Session 2.1 - Classes, Objects, and the OOP Paradigm
+- [x] Session 2.2 - Encapsulation
 
 ## 📅 Started on
 [2026/07/13]
