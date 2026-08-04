@@ -14,6 +14,10 @@ Examples: `public`, `private`, `protected`.
 A finite, ordered, and unambiguous sequence of instructions designed to solve a specific problem.
 It is the logic behind the solution, independent of any programming language.
 
+**Allocation (Memory Allocation)**
+The process of reserving a block of memory on the heap to hold an object's data.
+Triggered by the `new` keyword before the constructor runs.
+
 **AND (`&&`)**
 A logical operator that returns `true` only if both sides are `true`.
 Uses short-circuit evaluation: if the left side is `false`, the right side is never checked.
@@ -62,6 +66,10 @@ Does not mean "equals" in the mathematical sense.
 A sub-problem small enough that it cannot be broken down further usefully.
 The stopping point of decomposition.
 
+**Attribute (Field / Instance Variable)**
+A variable declared directly inside a class body, outside any method.
+Each object created from the class gets its own independent copy of every attribute.
+
 **Autoboxing**
 Java's automatic conversion between a primitive type and its corresponding wrapper class.
 Example: converting `int` to `Integer` without explicit code.
@@ -99,6 +107,10 @@ Provides repository hosting, code review tools, and CI/CD features.
 **Bitwise Operators**
 Operators that work directly on the binary representation of integer values.
 Examples: `&`, `|`, `^`, `~`, `<<`, `>>`.
+
+**Blueprint**
+A metaphor for what a class is: a definition that describes what an object will look like.
+The blueprint itself is not the building — the class itself is not the object.
 
 **`boolean`**
 A primitive type that stores only `true` or `false`.
@@ -183,8 +195,8 @@ A set of automated practices that build, test, and deploy code.
 Ensures changes are integrated and released quickly and safely.
 
 **Class**
-The basic building block of a Java application.
-It acts as a template for creating objects. Each `.java` file usually contains one class.
+The basic building block of a Java application. It describes the attributes and methods every object of that type will have.
+It acts as a template for creating objects. Each `.java` file usually contains one class. No memory is allocated for a class when it is defined — only when an object is created from it.
 
 **Class Field (Instance Variable)**
 A variable declared directly inside a class, outside any method.
@@ -266,6 +278,10 @@ Required when a merge conflict occurs.
 A variable whose value cannot change after it is initialized.
 Declared with the `final` keyword and named in `SCREAMING_SNAKE_CASE`.
 
+**Constructor**
+A special method called automatically by Java immediately after a new object is allocated.
+It has the same name as the class and no return type. Its job is to set the initial state of the object's attributes.
+
 **`continue`**
 A keyword that skips the rest of the current loop iteration and jumps to the next one.
 The loop itself does not end — only the current pass is interrupted.
@@ -295,6 +311,10 @@ One of the core concepts of programming logic.
 **Declaration**
 The operation of telling the compiler that a variable of a certain type exists.
 Example: `int age`;
+
+**Declarative Programming**
+A paradigm where you describe *what* you want, and the system decides *how* to produce it.
+Examples: SQL, HTML.
 
 **Decomposition**
 Breaking a large problem into smaller, manageable sub-problems.
@@ -388,6 +408,9 @@ Intentional in some patterns, but a common source of silent bugs when accidental
 A new functionality added to a software project.
 Often developed in its own branch (Git).
 
+**Field**
+See *Attribute*.
+
 **`final`**
 A keyword that prevents a variable from being reassigned after initialization.
 Also prevents methods from being overridden and classes from being extended.
@@ -443,6 +466,10 @@ Examples include Spring Boot, Quarkus, and Micronaut.
 A structured step-by-step approach to solving a problem consistently.
 Helps organize thinking before writing any code.
 
+**Functional Programming**
+A paradigm where logic is organized through the application of pure functions with no side effects.
+Examples: Haskell, Erlang, Clojure.
+
 ## G
 
 **Garbage Collector**
@@ -476,8 +503,8 @@ An algorithm that converts data into a fixed-size numeric value.
 Used in cryptography and data structures. Relies heavily on XOR and shift operations.
 
 **Heap**
-A large, dynamic memory area managed by the JVM where objects are stored.
-Managed by the Garbage Collector.
+A large, dynamic memory area managed by the JVM where objects are stored at runtime.
+Managed by the Garbage Collector. Every object created with `new` lives here.
 
 **History (Git)**
 The complete timeline of commits in a repository.
@@ -508,6 +535,13 @@ Turns a normal directory into a tracked project.
 **Initialization**
 The operation of assigning a value to a variable for the first time.
 Example: `age = 20`;
+
+**Instance**
+One specific, concrete object created from a class and living in memory.
+Two instances of the same class are independent — they do not share attribute values.
+
+**Instance Variable**
+See *Attribute*.
 
 **`int`**
 The standard integer primitive type in Java.
@@ -611,6 +645,10 @@ Fully compatible with Java and preferred by Google for Android development.
 An identifier placed before a loop, followed by a colon, used as a target for `break` or `continue`.
 Allows exiting an outer loop from inside a nested inner loop.
 
+**Lambda Expression**
+A concise way to represent a function as a value, introduced in Java 8.
+Brings functional programming patterns into Java.
+
 **LeetCode**
 An online platform with coding challenges focused on algorithms and data structures.
 Widely used for technical interview preparation.
@@ -677,6 +715,10 @@ Can cause the JVM to allocate more space than logically needed (e.g., for `boole
 A bug where a program fails to release memory it no longer needs.
 Common in languages like C; prevented in Java by the Garbage Collector.
 
+**Memory-Resident**
+Describes data that currently exists and is accessible in RAM.
+An object is memory-resident from the moment `new` allocates it until the Garbage Collector removes it.
+
 **Merge**
 The act of combining changes from one branch into another.
 Integrates parallel work back into a single line of development.
@@ -686,8 +728,8 @@ A situation where Git cannot automatically combine changes.
 Requires manual correction.
 
 **Method**
-A block of code that performs a specific action.
-It is like a "verb" in the programming language (e.g., `println` performs the action of printing).
+A block of code declared inside a class that defines an operation any object of that class can perform.
+It is like a "verb" in the programming language (e.g., `println` performs the action of printing). When called on a specific object, it runs in the context of that object's attribute values.
 
 **Microservices**
 An architectural style where an application is built as a collection of small, independent services.
@@ -715,6 +757,10 @@ Valid when the inner condition only makes sense after the outer one is confirmed
 A loop placed inside the body of another loop.
 The inner loop completes all its iterations for each single iteration of the outer loop.
 
+**`new` (Keyword / Operator)**
+An operator that triggers three steps: allocates memory on the heap, calls the constructor, and returns a reference to the new object.
+Every object must be created with `new`.
+
 **Newline Character (`\n`)**
 A special character that represents the end of a line of text.
 Left behind in the buffer by `nextInt()` and `nextDouble()`, causing the buffer trap.
@@ -737,9 +783,13 @@ One of the most common errors in Java.
 
 ## O
 
+**Object**
+A running, memory-resident instance of a class.
+It holds its own copy of all attributes defined by the class and can perform all methods defined by the class.
+
 **Object-Oriented Programming (OOP)**
-A programming paradigm based on the concept of "objects," which contain data and code.
-Organizes software design around data rather than functions.
+A programming paradigm where code is organized around objects that bundle data and behavior together.
+Organizes software design around data rather than functions. The primary paradigm of Java.
 
 **Object Reference**
 A variable that stores the memory address of an object, not the object itself.
@@ -783,6 +833,10 @@ Example: assigning a number too large for `int` without using `long`.
 A way of organizing Java classes into namespaces (like `com.example`; named in all lowercase).
 In the file system, a package corresponds to a folder structure.
 
+**Paradigm**
+A structural contract that defines the fundamental building block of a program and how logic is organized.
+Examples: procedural, object-oriented, functional, declarative.
+
 **PascalCase**
 A naming convention where every word starts with an uppercase letter.
 Used for class names in Java (e.g., `StudentRecord`).
@@ -815,6 +869,10 @@ Provides methods like `print()`, `println()`, and `printf()` for sending output 
 An access modifier that restricts visibility to within the same class only.
 Hides internal details from the outside.
 
+**Procedural Programming**
+A paradigm where logic is organized as a sequence of instructions grouped into functions.
+Examples: C, Pascal.
+
 **Processing**
 The set of operations performed on input data to produce the output.
 The "middle step" in the IPO framework.
@@ -834,6 +892,10 @@ Written in plain language, not in any specific programming language syntax.
 **`public`**
 An access modifier that makes a class, method or variable accessible from anywhere in the project.
 If it’s public, the JVM and other classes can see and use it. Required for the `main` method so the JVM can call it.
+
+**Pure Function**
+A function that always produces the same output for the same input and has no side effects.
+A central concept in functional programming.
 
 **`pom.xml`**
 The configuration file for Maven.
@@ -869,6 +931,10 @@ Variables and objects live here during execution.
 The process of restructuring existing code without changing its behavior.
 Improves readability or maintainability.
 
+**Reference**
+A variable that stores the memory address of an object, not the object itself.
+Assigning one reference variable to another makes both point to the same object, not two independent copies.
+
 **Relational Operators**
 Operators that compare two values and return a boolean.
 Examples: `==`, `!=`, `>`, `<`, `>=`, `<=`.
@@ -891,7 +957,7 @@ Examples include configuration files, images, or database settings.
 
 **`return`**
 A keyword that exits a method and optionally sends a value back to the caller.
-A method declared `void` uses `return` with no value, or omits it entirely.
+A method declared `void` uses `return` with no value, or omits it entirely. Constructors have no return type — not even `void`.
 
 **Rework**
 The time spent fixing or redoing work that was done incorrectly the first time.
@@ -904,6 +970,10 @@ Each shift right is equivalent to dividing the value by `2` (integer division). 
 **Root Directory**
 The main "top-level" folder of a project or installation.
 For the JDK, it is the folder that contains bin, lib, and other subfolders (e.g., C:\Program Files\Java\jdk-21).
+
+**Runtime**
+The period when a compiled program is actually executing.
+Objects are created and destroyed at runtime, not at compile time.
 
 **Runtime Error/Crash**
 An error that occurs while the program is running, not during compilation.
@@ -919,6 +989,10 @@ SCREAMING_SNAKE_CASE (UPPER_SNAKE_CASE)
 A naming convention where all letters are uppercase and words are separated by underscores.
 Used for constants in Java (e.g., `MAX_SCORE`).
 
+**Scope**
+The region of code where a variable is visible and accessible.
+Local variables are scoped to their method; attributes are scoped to the entire object's lifetime.
+
 **Self-documenting Code**
 Code written so clearly that its intent is obvious from the names and structure alone.
 Good variable and method names eliminate the need for explanatory comments.
@@ -926,6 +1000,10 @@ Good variable and method names eliminate the need for explanatory comments.
 **Sequencing**
 The correct ordering of instructions so that each step logically follows the previous one.
 A fundamental concept of programming logic.
+
+**Shadow (Variable Shadowing)**
+When a local variable or parameter has the same name as an attribute, hiding the attribute from direct access.
+Resolved by using `this.attributeName` to explicitly refer to the attribute.
 
 **Shell**
 The program that interprets your text commands and tells the operating system what to do.
@@ -939,6 +1017,10 @@ Uses 16 bits and stores values from -32,768 to 32,767.
 A behavior where Java stops evaluating a logical expression as soon as the result is determined.
 Prevents unnecessary or dangerous operations on the right side of `&&` and `||`.
 
+**Side Effect**
+Any change a function or method makes to state outside its own scope.
+Modifying an attribute inside a method is a side effect.
+
 **Sign Bit**
 The leftmost bit in a signed integer that indicates whether the number is positive or negative.
 `0` means positive, `1` means negative.
@@ -950,6 +1032,14 @@ Java's `int` is a 32-bit signed integer.
 **Signature (Method Signature)**
 The unique combination of a method's name and its parameters.
 The JVM uses the signature to identify exactly which method to run.
+
+**State**
+The current values of all attributes of an object at a given moment.
+The constructor sets the initial state; methods can change it over time.
+
+**Static Method**
+A method that belongs to the class itself, not to any specific instance.
+Cannot access instance attributes directly because it has no associated object.
 
 **String Pool**
 An area in Java's memory where string literals are stored and reused.
@@ -1042,8 +1132,8 @@ A compact operator that evaluates a condition and returns one of two values.
 Syntax: `condition ? value_if_true : value_if_false`. Best used for simple, single-line assignments.
 
 **`this`**
-A keyword that refers to the current object instance inside a class.
-Used to distinguish between class fields and method parameters with the same name.
+A reference inside a method or constructor that points to the specific object the code is currently running on.
+Used to distinguish between class fields (attribute) and method parameters with the same name.
 
 **Threads**
 A small unit of a process that executes tasks.
@@ -1064,6 +1154,10 @@ Example: in Java, storing `3.9` in an `int` results in `3`, not `4`.
 **Token**
 A single unit of input separated by whitespace (space, tab, or newline).
 `Scanner.next()` reads one token at a time.
+
+**Type**
+A classification that defines what values a variable can hold and what operations are valid on it.
+In OOP, a class defines a new custom type.
 
 **Type Inference**
 The ability of the compiler to automatically determine a variable's type from its assigned value.
@@ -1086,6 +1180,10 @@ Examples: `!` (logical NOT) and `~` (bitwise NOT).
 **Unicode**
 An international standard that assigns a unique number to every character across all languages and symbols.
 Java's `char` type is based on Unicode.
+
+**Unit (Self-contained)**
+In OOP, an object that bundles its own data and behavior together.
+No external code needs to manage its internal state directly.
 
 **Uninitialized Variable**
 A variable that has been declared but not yet assigned a value.
