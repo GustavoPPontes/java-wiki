@@ -62,5 +62,8 @@ Technical terms explained without jargon.
 - [x] Session 1.4 - Arrays and Loops
 - [x] Project - Selection Process Validation System
 
+### Module 02 — Object-Oriented Programming (OOP)
+- [x] Session 2.1 — Classes, Objects, and the OOP Paradigm
+
 ## 📅 Started on
 [2026/07/13]
